@@ -1,3 +1,4 @@
+
 .rbc-btn {
   color: inherit;
   font: inherit;
@@ -8,6 +9,7 @@ button.rbc-btn {
   text-transform: none;
   -webkit-appearance: button;
   cursor: pointer;
+  
 }
 button[disabled].rbc-btn {
   cursor: not-allowed;
@@ -48,6 +50,7 @@ button.rbc-input::-moz-focus-inner {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: red;
 }
 .rbc-rtl {
   direction: rtl;
@@ -84,27 +87,34 @@ button.rbc-input::-moz-focus-inner {
   width: 100%;
   padding: 0 10px;
   text-align: center;
+  color: blueviolet;
+  font-family: 'Uncial Antiqua', cursive;
+  font-size: 1.2em;
 }
 .rbc-toolbar button {
-  color: #373a3c;
+  color: rebeccapurple;
   display: inline-block;
   margin: 0;
   text-align: center;
   vertical-align: middle;
   background: none;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(20, 15, 15);
   padding: .375rem 1rem;
-  border-radius: 4px;
+  border-radius: 25% 10%;
   line-height: normal;
   white-space: nowrap;
+  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Pacifico', cursive;
+  text-transform: capitalize;
 }
 .rbc-toolbar button:active,
 .rbc-toolbar button.rbc-active {
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  background-color: #43b9dd;
+  border-color: rgb(20, 15, 15);
+  border: none;
 }
 .rbc-toolbar button:active:hover,
 .rbc-toolbar button.rbc-active:hover,
@@ -120,13 +130,15 @@ button.rbc-input::-moz-focus-inner {
   border-color: #adadad;
 }
 .rbc-toolbar button:hover {
-  color: #373a3c;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #383c37;
+  background-color: #43b9dd;
+  border-color: #43b9dd;
 }
 .rbc-btn-group {
   display: inline-block;
   white-space: nowrap;
+  border-radius: 100px;
+  color: royalblue;
 }
 .rbc-btn-group > button:first-child:not(:last-child) {
   border-top-right-radius: 0;
@@ -163,9 +175,9 @@ button.rbc-input::-moz-focus-inner {
 .rbc-event {
   cursor: pointer;
   padding: 2px 5px;
-  background-color: #3174ad;
+  background-color: #51df19;
   border-radius: 5px;
-  color: #fff;
+  color: #000;
 }
 .rbc-event.rbc-selected {
   background-color: #265985;
@@ -209,7 +221,7 @@ button.rbc-input::-moz-focus-inner {
 }
 .rbc-month-view {
   position: relative;
-  border: 1px solid #DDD;
+  border: 1px solid rgb(0, 0, 0);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -220,16 +232,18 @@ button.rbc-input::-moz-focus-inner {
   height: 100%;
 }
 .rbc-month-view .rbc-header {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid rgb(0, 0, 0);;
 }
 .rbc-month-view .rbc-header + .rbc-header {
-  border-left: 1px solid #DDD;
+  border-left: 1px solid rgb(0, 0, 0);;
 }
 .rbc-rtl .rbc-month-view .rbc-header + .rbc-header {
   border-left-width: 0;
-  border-right: 1px solid #DDD;
+  border-right: 1px solid rgb(0, 0, 0);;
 }
 .rbc-month-header {
+  background: -moz-linear-gradient(top, rgba(243,197,189,1) 0%, rgba(232,108,87,1) 50%, rgba(234,40,3,1) 51%, rgba(255,102,0,1) 75%, rgba(199,34,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
   display: -ms-flexbox;
   display: flex;
   flex:1;
@@ -238,6 +252,8 @@ button.rbc-input::-moz-focus-inner {
       flex-direction: row;
 }
 .rbc-month-row {
+  background: -moz-linear-gradient(top, rgba(197,222,234,1) 0%, rgba(138,187,215,1) 31%, rgba(6,109,171,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(197,222,234,1) 0%,rgba(138,187,215,1) 31%,rgba(6,109,171,1) 100%); /* Chrome10-25,Safari5.1-6 */
   display: table;
   flex: 1;
   width: 100%;
@@ -248,7 +264,7 @@ button.rbc-input::-moz-focus-inner {
   height: 12vh;
 }
 .rbc-month-row + .rbc-month-row {
-  border-top: 1px solid #DDD;
+  border-top: 1px solid rgb(0, 0, 0);;
 }
 .rbc-date-cell {
   padding-right: 5px;
@@ -277,7 +293,7 @@ button.rbc-input::-moz-focus-inner {
   overflow: hidden;
 }
 .rbc-day-bg + .rbc-day-bg {
-  border-left: 1px solid #DDD;
+  border-left: 1px solid rgb(0, 0, 0);;
 }
 .rbc-rtl .rbc-day-bg + .rbc-day-bg {
   border-left-width: 0;
@@ -410,9 +426,12 @@ button.rbc-input::-moz-focus-inner {
   line-height: 1;
   height: 100%;
   min-height: 1em;
+  background-color: #e41212;
+  color: black;
+
 }
 .rbc-day-slot .rbc-time-slot {
-  border-top: 1px solid #f7f7f7;
+  border-top: 1px solid rgb(20, 15, 15);
 }
 .rbc-time-slot {
   -ms-flex: 1 0 0;
@@ -467,21 +486,21 @@ button.rbc-input::-moz-focus-inner {
       flex-direction: column;
 }
 .rbc-time-header.rbc-overflowing {
-  border-right: 1px solid #DDD;
+  border-right: 1px solid rgb(20, 15, 15);
 }
 .rbc-rtl .rbc-time-header.rbc-overflowing {
   border-right-width: 0;
-  border-left: 1px solid #DDD;
+  border-left: 1px solid rgb(20, 15, 15);
 }
 .rbc-time-header > .rbc-row > * + * {
-  border-left: 1px solid #DDD;
+  border-left: 1px solid rgb(20, 15, 15);
 }
 .rbc-rtl .rbc-time-header > .rbc-row > * + * {
   border-left-width: 0;
-  border-right: 1px solid #DDD;
+  border-right: 1px solid rgb(20, 15, 15);
 }
 .rbc-time-header > .rbc-row:first-child {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid rgb(20, 15, 15);
 }
 .rbc-time-header .rbc-gutter-cell {
   -ms-flex: none;
